@@ -1,0 +1,10 @@
+{% include 'header.html' %}
+
+<body>
+  <h1>🐶🐱 Bienvenido a la página de animales</h1>
+  <p>¡Aquí puedes explorar criaturas increíbles!</p>
+<br>
+  <a class="boton-osos" href="{{url_for('ruta_o')}}" >Osos 🐻</a>
+  <a class="boton-osos boton-volver" href="{{url_for ('login')}}">⬅ Volver al inicio</a>
+  <a class="boton-elefantes" href="{{url_for('ruta_elefantes')}}" >elefantes</a>
+  {% include 'footer.html' %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Elefantes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <div style="text-align: center; margin-top: 100px;">
+        <h1>🐘 Cuenta regresiva para los elefantes</h1>
+        <p>Prepárate para su gran estreno.</p>
+
+        <div id="contador">⏳ Cargando temporizador...</div>
+
+        <button class="boton boton-volver" onclick="window.location.href='animales'">⬅ Volver </button>
+    </div>
+
+    <script>
+        // Fecha actual
+        const ahora = new Date();
+
+        // Establecer estreno en 24 horas
+        const estreno = new Date(ahora.getTime() + 24 * 60 * 60 * 1000);
+
+        function actualizarContador() {
+            const ahora = new Date();
+            const diferencia = estreno - ahora;
+
+            if (diferencia <= 0) {
+                document.getElementById("contador").innerHTML = "🌟 ¡Ya comenzaron los elefantes!";
+                return;
+            }
+
+            const horas = Math.floor(diferencia / (1000 * 60 * 60));
+            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+            document.getElementById("contador").innerHTML =
+                `⏳ Faltan ${horas}h ${minutos}m ${segundos}s`;
+        }
+
+        setInterval(actualizarContador, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osos</title>
+  <style>
+    body {
+      background-color: #fff9e6;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #4b3f30;
+    }
+
+    p {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .boton {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #85b4a1;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #5b8978;
+    }
+
+    .boton-volver {
+      margin-top: 40px;
+      background-color: #f18b5e;
+    }
+
+    .boton-volver:hover {
+      background-color: #c96c42;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐻 Bienvenido a la sección de osos</h1>
+  <p>¡Escoge tu favorito!</p>
+
+  <button class="boton" onclick="window.location.href='polar'">Oso Polar ❄️</button>
+  <button class="boton" onclick="window.location.href='panda'">Oso Panda 🎋</button>
+  <button class="boton" onclick="window.location.href='grizzly'">Oso Grizzly 🪵</button>
+
+
+
+
+  <button class="boton boton-volver" onclick="window.location.href='animales'">⬅ Volver </button>
+</body>
+</html>

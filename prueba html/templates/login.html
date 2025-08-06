@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+ 
+    <div class="login-container">
+        <h2 class="login-title">Iniciar sesión</h2>
+ 
+        {% if error %}
+            <p class="login-error">{{ error }}</p>
+        {% endif %}
+ 
+        <form method="POST" action="{{ url_for('validar') }}">
+            <input type="text" name="usuario" placeholder="Usuario" class="login-input" required>
+            <input type="password" name="password" placeholder="Contraseña" class="login-input" required>
+            <button type="submit" class="login-button">Ingresar</button>
+        </form>
+ 
+        <div style="margin-top: 20px;">
+            <a href="{{ url_for('index') }}" class="boton-osos boton-volver">⏴ Volver al inicio</a>
+        </div>
+    </div>
+ 
+</body>
+</html>
